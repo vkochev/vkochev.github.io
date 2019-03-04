@@ -6,11 +6,10 @@
   "author": "vkochev",
   "license": "MIT",
   "scripts": {
-    "tsc": "rimraf ./lib && tsc",
-    "webpack-dev": "webpack-dev-server --config ./lib/webpack.config.js --mode development",
-    "webpack-build": "webpack --config ./lib/webpack.config.js --mode production",
-    "start": "yarn tsc && yarn webpack-dev",
-    "build": "yarn tsc && yarn webpack-build"
+    "webpack-dev": "webpack-dev-server --config ./webpack.config.ts --mode development",
+    "webpack-build": "webpack --config ./webpack.config.ts --mode production",
+    "start": "yarn webpack-dev",
+    "build": "yarn webpack-build"
   },
   "devDependencies": {
     "@types/node": "^11.10.4",
@@ -20,6 +19,7 @@
     "@types/webpack": "^4.4.25",
     "@types/webpack-dev-server": "^3.1.2",
     "rimraf": "^2.6.3",
+    "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.6",
